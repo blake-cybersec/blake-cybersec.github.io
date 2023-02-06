@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  background-color: #333;
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+}
+
+
+.content {
+  max-width: 700px;
+  margin: auto;
+  background: #333;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+}
+
+p {
+  margin-left: 10px;
+  line-height: 120%;
+  color: #fff;
+}
+
+h2 {
+  margin-left: 10px;
+  margin-top: 50px;
+  color: #fff;
+}
+
+li {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  line-height: 120%;
+  color: #fff;
+}
+  
+ul {
+  list-style-type: square;
+}
+
+.special-button {
+  padding: 8px 16px;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: white;
+}
+
+/* Orange */
+.warning {
+  border-color: #ff9800;
+  color: orange;
+}
+
+.warning:hover {
+  background: #ff9800;
+  color: white;
+}
+
+#Portfolio {background-color: #333;}
+#Projects {background-color: #333;}
+#Certifications {background-color: #333;}
+#About {background-color: #333;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Portfolio', this, '#686868')" id="defaultOpen">Portfolio</button>
+<button class="tablink" onclick="openPage('Projects', this, '#686868')">Projects</button>
+<button class="tablink" onclick="openPage('Certifications', this, '#686868')">Certifications</button>
+<button class="tablink" onclick="openPage('About', this, '#686868')">About Me</button>
+
+<div id="Portfolio" class="tabcontent">
+  <div class="content">
+    <h1>Blake's Portfolio</h1>
+    <p><strong>Hello I'm Blake Boudro</strong></p>
+    <p>Phone Number: +1 (321) 243 8099</p>
+    <p>Email: b.boudro@yahoo.com</p>
+    <h2>Education</h2>
+    <ul>
+      <li><strong>High School Diploma</strong> from Einstein Montessori Academy, Graduated in 2019.</li>
+      <li><strong>Associate of Arts</strong> degree from Eastern Florida State College, Graduated in 2021.</li>
+      <li><strong>Currently pursuing a Batchelor's</strong> in Computer Information Systems Technology with Cybersecurity Specialization degree: </li>
+        <ul>
+                <p><strong>Classes Include:</strong></p>
+                <li>Network+</li>
+                <li>Microsoft Client O/S</li>
+                <li>Linux Networking/Sys Admin</li>
+                <li>Cybersecurity Fundamentals</li>
+                <li>Database Design & Architecture</li>
+                <li>Object Oriented Programming</li>
+        </ul>
+      
+    </ul>
+    <h2>Certifications</h2>
+    <ul>
+      <li>Comptia Network+ N10-008</li>
+      <li>Comptia Security+ SY0-601</li>
+    </ul>
+    <h2>Employment History</h2>
+    <ul>
+      <li><strong>2023 Spring Intership:</strong> Currently interning at Eastern Florida State College under the Cybersecurity Batchelor's Program.</li>
+      <ul>
+          <li>Assisting in setting up mock lab for cyber security exercises</li>
+          <li>Duties include setting up an Security Operations Center and pen-testing room</li>
+          <li>Providing hands-on experience in a simulated environment, allowing for practical application of knowledge and skills.</li>
+      </ul>
+    </ul>
+    <h2>Awards and Accomplishments</h2>
+    <ul>
+      <li><strong>Member of CyberTitans Club</strong>, a cybersecurity club at Eastern Florida State College</li>
+      <ul>
+        <li>CTF – National Cyber League Fall 2022 Individual Game Rank: 439 / 3487 (88th Percentile)</li>
+        <li>CTF – National Cyber League Fall 2022 Team Game Rank: 95 / 1068 (92nd Percentile)</li>
+      </ul>
+    </ul>
+  </div>
+</div>
+
+<div id="Projects" class="tabcontent">
+  <div class="content">
+  <h3>Projects</h3>
+    <div style="display: flex;">
+      <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/92/2018/09/20071313/rats-in-ics-Featured.jpg" alt="image" style="margin-right: 16px; max-width: 50%; height: auto;" />
+      <div style="flex: 1;">
+        <h2>The Dangers of RATs: How Attackers Gain Control Over Your Devices</h2>
+        <p>Discover the dangers of Remote Access Trojans (RATs) and how attackers gain control over your device. Learn about the 3 steps to installing a RAT and protect yourself with vigilance and anti-virus software. Check out my project.</p>
+        <a href="projects/rat-project.html">
+          <button class="special-button warning" style="margin-top: 16px;">Learn More</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="Certifications" class="tabcontent">
+  <h3>Certifications</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Dangers of Remote Access Trojans (RATs)</title>
+</head>
+<body>
+    <div class="content">
+        <h1>The dangers of Remote Access Trojans (RATs) in our online world cannot be overstated</h1>
+        <h2>What is a RAT?</h2>
+        <p>RATs are malicious software that allow an attacker to gain unauthorized access to a computer system, giving them complete control over the victim’s device. They can be used for anything from stealing sensitive information to remotely controlling the infected device.</p>
+        <p>When setting up an attack vector, an attacker typically requires three things to succeed: a reason for the victim to be interested, the ability to access the device, and something to gain. In this article, we will take a look at how an attacker can use these three elements to install a RAT on a victim’s device.</p>
+        <h2>Gaining Full Access to a System through a RAT</h2>
+        <p>To gain full access to a system through a RAT, the first step is to trick the victim into accessing a website. This website could host a number of malicious files, including the RAT. The easiest way to create such a website is to use a pre-made template or a website builder such as WordPress. This allows the attacker to set up a website without needing to have extensive knowledge of HTML and CSS programming.</p>
+	</div>
+    <a href="#" id="expand-link-1">
+        <img src="rat-project-images\Webcode.png" alt="Website Template" style="width: auto; height: 300px;" class="center-image">
+      </a>
+      <div id="expandable-img-1" style="display: none;">
+        <img src="rat-project-images\Webcode.png" alt="Website Template" style="width: auto; height: auto;" class="center-image">
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#expand-link-1').click(function(e) {
+          e.preventDefault();
+          $('#expandable-img-1').toggle();
+        });
+      });
+    </script>
+    <div class="content">
+    <p>Once the website is set up, the attacker needs to make sure that the victim has the ability to access it. This can be achieved by using web crawlers, which are tools that search the internet for new websites and add them to a database of other websites. Companies such as Alphabet, Microsoft, and Yahoo use web crawlers to build their search engine databases, making it easier for the victim to find the malicious website.</p>
+	<p>Finally, the attacker needs to give the victim a reason to access the website. In this example, the attacker creates a website that offers free wallpapers to the user. The trick is that the web crawler only scrapes low-resolution thumbnails of the wallpapers, allowing them to appear on Google or Bing image search. When the victim tries to set a wallpaper, they will find that it looks low resolution. They will then go back to the website and find that the full-resolution wallpaper is available for download, which is actually the RAT in disguise.</p>
+	<h2>Creating the RAT</h2>
+	<p>Once the website is set up, the attacker then needs to create the RAT. In this example, the attacker uses the njRAT from the CEH-Tool kit. The first step is to set the IP in Windows and then configure the RAT to match. The attacker then builds the RAT with the default settings and keeps the name Server.exe.</p>
+	</div>
+    <a href="#" id="expand-link-3">
+        <img src="rat-project-images\RatUI.png" alt="Hosting nginx" style="width: auto; height: 300px;" class="center-image">
+    </a>
+    <div id="expandable-img-3" style="display: none;">
+        <img src="rat-project-images\RatUI.png" alt="Hosting nginx" style="width: auto; height: auto;" class="center-image">
+    </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#expand-link-3').click(function(e) {
+        e.preventDefault();
+        $('#expandable-img-3').toggle();
+        });
+    });
+    </script>
+    <div class="content">
+    <p>Next, the attacker uses a crypter, such as Swayz Cryptor, to hide the RAT from anti-viruses like Windows Defender or Bit Defender. The crypter encrypts the RAT and makes it more difficult for anti-viruses to detect it.</p>
+    </div>
+    <a href="#" id="expand-link-4">
+        <img src="rat-project-images\cryptor.png" alt="Hosting nginx" style="width: auto; height: 300px;" class="center-image">
+    </a>
+    <div id="expandable-img-4" style="display: none;">
+        <img src="rat-project-images\cryptor.png" alt="Hosting nginx" style="width: auto; height: auto;" class="center-image">
+    </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#expand-link-4').click(function(e) {
+        e.preventDefault();
+        $('#expandable-img-4').toggle();
+        });
+    });
+    </script>
+    <div class="content">
+    <p>The attacker then takes the wallpapers from the website and converts them into icons, which they then compile with the RAT into a Self-Extracting (SFX) archive. An SFX archive is a type of archive that can be automatically extracted without the need for an extractor. This makes it perfect for hiding malicious software.</p>
+    </div>
+    <a href="#" id="expand-link-5">
+        <img src="rat-project-images\SFXwindow.png" alt="Hosting nginx" style="width: auto; height: 300px;" class="center-image">
+    </a>
+    <div id="expandable-img-5" style="display: none;">
+        <img src="rat-project-images\SFXwindow.png" alt="Hosting nginx" style="width: auto; height: auto;" class="center-image">
+    </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#expand-link-5').click(function(e) {
+        e.preventDefault();
+        $('#expandable-img-5').toggle();
+        });
+    });
+    </script>
+    <div class="content">
+    <p>After creating the SFX archive, the attacker then puts it into a zip file. This makes it harder for the user to recognize that it’s an application, as when downloading an .exe from a web browser, it will typically show that it is an .exe file. However, by putting it in a zip file, the default unzipper for Windows hides the extensions, making it more difficult for the user to identify that it is a dangerous file.</p>
+        </div>
+        <a href="#" id="expand-link-6">
+            <img src="rat-project-images\nginx.png" alt="Hosting nginx" style="width: auto; height: 200px;" class="center-image">
+        </a>
+        <div id="expandable-img-6" style="display: none;">
+            <img src="rat-project-images\nginx.png" alt="Hosting nginx" style="width: auto; height: auto;" class="center-image">
+        </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('#expand-link-6').click(function(e) {
+            e.preventDefault();
+            $('#expandable-img-6').toggle();
+            });
+        });
+        </script>
+    <div class="content">
+    <p>To set up the attack, the attacker then sets up a local nginx server. Aftersetting up the server, the attacker will then upload the zip file containing the SFX archive to the server. They will then create a custom link for the victim to download the file. This custom link is designed to make the victim feel like they are downloading a legitimate file, such as a wallpaper, rather than a malicious software.</p>
+        </div>
+        <a href="#" id="expand-link-7">
+            <img src="rat-project-images\Hidingfile.png" alt="Hosting nginx" style="width: auto; height: 350px;" class="center-image">
+        </a>
+        <div id="expandable-img-7" style="display: none;">
+            <img src="rat-project-images\Hidingfile.png" alt="Hosting nginx" style="width: auto; height: auto;" class="center-image">
+        </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('#expand-link-7').click(function(e) {
+            e.preventDefault();
+            $('#expandable-img-7').toggle();
+            });
+        });
+        </script>
+    <div class="content">
+    <p>Once the victim clicks on the link and downloads the file, the SFX archive will extract the RAT onto the victim’s device. This is where the RAT becomes truly dangerous, as it will grant the attacker full control over the victim’s device. The attacker can then use this control to steal sensitive information such as passwords, access the victim’s personal files, and even use the device as a launching pad for further attacks.</p>
+            </div>
+        <a href="#" id="expand-link-8">
+            <img src="rat-project-images\compromised.png" alt="Hosting nginx" style="width: auto; height: 350px;" class="center-image">
+        </a>
+        <div id="expandable-img-8" style="display: none;">
+            <img src="rat-project-images\compromised.png" alt="Hosting nginx" style="width: auto; height: auto;" class="center-image">
+        </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('#expand-link-8').click(function(e) {
+            e.preventDefault();
+            $('#expandable-img-8').toggle();
+            });
+        });
+        </script>
+    <div class="content">
+    <p>It is important to remember that RATs are not limited to the desktop. They can also be installed on mobile devices, allowing the attacker to gain complete control over the victim’s smartphone or tablet.</p>
+    <h2>Conclusion</h2>
+    <p>In conclusion, the dangers of RATs in our online world cannot be overstated. By following the steps outlined in this article, it is easy to see how an attacker can gain access to a victim’s device and take full control. It is crucial to be vigilant when downloading files from the internet, and to always have anti-virus software installed to protect against RATs and other malicious software.</p>
+  </body>
+  </div>
+  </body>
+</html>
