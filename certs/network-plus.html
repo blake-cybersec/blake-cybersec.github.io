@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Network plus</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Understanding Network+ Certification</h1>
+        <h2>Overview</h2>
+        <p>This article serves as a window into the vast and intricate world of networking, covering several key concepts and terms that are essential for any aspiring network administrator or IT professional. From IP addressing and fiber optics to DNS records, DHCP, and NAT routing, the article provides a glimpse into the complex workings of modern computer networks. However, it's important to note that this is just the tip of the iceberg - there is a wealth of knowledge and expertise to be gained in this field, and this article merely scratches the surface.</p>
+        
+        <h2>Classless/Classful</h2>
+        <p>In IP addressing, Classless and Classful are two methods of assigning IP addresses. In a Classful addressing scheme, IP addresses are assigned based on predefined classes (A, B, C, D, and E). In a Classless addressing scheme, IP addresses are assigned in any size network, without regard to class boundaries. Classless addressing allows for more efficient use of IP address space.</p>
+        
+        <h2>APIPA Automatic Private IP Addressing</h2>
+        <p>When a computer is unable to obtain an IP address from a DHCP server, Automatic Private IP Addressing (APIPA) can help. This Microsoft Windows feature automatically assigns a private IP address to the computer, allowing it to communicate with other devices on the same network.</p>
+
+        <h2>MTU Maximum Transmission Unit and Jumbo Frames &amp; Giant &amp; Runt</h2>
+        <p>The Maximum Transmission Unit (MTU) is the largest size packet that can be transmitted over a network. The MTU size varies depending on the type of network and the protocols used. Jumbo Frames are Ethernet frames that exceed the default MTU size of 1500 bytes. While they can improve network performance, not all devices support Jumbo Frames, and they may cause compatibility issues with some network equipment. Giant and Runt frames are Ethernet frames that are either larger or smaller than the allowed size for the particular network.</p>
+
+        <h2>Syslog Severity Levels</h2>
+        <p>When it comes to system messages, it's important to understand their level of severity. Syslog is a protocol used to send these messages to a central logging server. There are eight syslog severity levels, ranging from Emergency to Debug, with each level indicating a different degree of severity. Emergency messages indicate the most critical conditions, while Debug messages are the least critical.</p>
+
+        <h2>802.11 Variants</h2>
+        <p>802.11 is a set of wireless networking standards developed by the Institute of Electrical and Electronics Engineers (IEEE). There are several variants of 802.11, including 802.11a, 802.11b, 802.11g, 802.11n, and 802.11ac. Each variant operates at a different frequency and has different data transfer rates, channel widths, and modulation schemes.</p>
+
+        <h2>MMF Multi-Mode Fiber</h2>
+        <p>Multi-Mode Fiber (MMF) is an optical fiber that allows multiple modes of light to propagate through it. MMF has a larger core diameter than SMF, typically around 50-62.5 microns, which allows for greater light transmission capacity. However, MMF has higher signal attenuation and dispersion than SMF, limiting its use to shorter distances and lower bandwidth applications.</p>
+
+        <h2>SMF Single-Mode Fiber</h2>
+        <p>Single-Mode Fiber (SMF) is an optical fiber that allows only one mode of light to propagate through it. This type of fiber has a small core diameter, typically around 9 microns, and is used in long-distance telecommunications applications because it has low signal attenuation and dispersion. SMF can support higher bandwidth and longer transmission distances than Multi-Mode Fiber (MMF).</p>
+        
+        <h2>Main Types of Domain Name Records</h2>
+        <p>Domain Name System (DNS) records are used to map domain names to IP addresses. There are several types of DNS records, including A, AAAA, MX, CNAME, and NS records. A records map a domain name to an IPv4 address, while AAAA records map to IPv6 addresses. MX records specify the mail server for a domain, while CNAME records map aliases to a domain name. NS records specify the name servers responsible for a domain.</p>
+        
+        <h2>DHCP and DHCP Scope Exhaustion</h2>
+        <p>Dynamic Host Configuration Protocol (DHCP) is a protocol used to automatically assign IP addresses and other network configuration information to devices on a network. DHCP Scope refers to the range of IP addresses available for lease to devices. DHCP Scope Exhaustion occurs when all available IP addresses within the scope have been leased out, leading to a lack of available addresses for new devices to connect.</p>
+        
+        <h2>Network Address Translation (NAT) Routing</h2>
+        <p>Network Address Translation (NAT) is a technique used to translate private IP addresses into public IP addresses and vice versa. NAT allows devices on a private network to communicate with devices on the internet by using a single public IP address assigned to the network's router. NAT routing refers to the process of forwarding incoming traffic to the correct device on the private network.</p>
+
+
+    </div>
+  </body>
+</html>
